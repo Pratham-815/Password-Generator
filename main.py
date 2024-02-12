@@ -27,3 +27,22 @@ for k in range(1, nr_symbols+1):
 
 print(f"The easy password is : {password}")
 
+strong_password = []
+
+for i in range(1, nr_letters+1):
+    strong_password.append(random.choice(letters))
+
+for j in range(1, nr_numbers+1):
+    strong_password.append(random.choice(numbers))
+
+for k in range(1, nr_symbols+1):
+    strong_password.append(random.choice(symbols))
+
+random.shuffle(strong_password)
+
+new_password = ""
+
+for i in strong_password:
+    new_password += i
+
+print(f"The strong password is : {new_password}")
