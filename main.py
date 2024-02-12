@@ -12,4 +12,18 @@ nr_letters = int(input("How many letters would you like in your password ? : "))
 nr_numbers = int(input("How many numbers would you like in your password ? : "))
 nr_symbols = int(input("How many symbols would you like in your password ? : "))
 
+print("\n")
+
+password = ""
+
+for i in range(1, nr_letters+1):
+    password += random.choice(letters)
+
+for j in range(1, nr_numbers+1):
+    password += random.choice(numbers)
+
+for k in range(1, nr_symbols+1):
+    password += random.choice(symbols)
+
+print(f"The easy password is : {password}")
 
